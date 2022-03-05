@@ -22,11 +22,40 @@ return (
            </Search>
            <Nav>
               <NavListWrap>
-                  <NavList>
+                  <NavList className="active">
                       <a>
                           <img src="/images/nav-home.svg" alt=""/>
+                          <span>Home</span>
                       </a>
                   </NavList>
+                  <NavList>
+              <a>
+                <img src="/images/nav-network.svg" alt="" />
+                <span>My Network</span>
+              </a>
+            </NavList>
+
+            <NavList>
+              <a>
+                <img src="/images/nav-jobs.svg" alt="" />
+                <span>Jobs</span>
+              </a>
+            </NavList>
+
+            <NavList>
+              <a>
+                <img src="/images/nav-messaging.svg" alt="" />
+                <span>Messaging</span>
+              </a>
+            </NavList>
+
+            <NavList>
+              <a>
+                <img src="/images/nav-notifications.svg" alt="" />
+                <span>Notifications</span>
+              </a>
+            </NavList>
+                 
               </NavListWrap>
            </Nav>
            
