@@ -4,7 +4,10 @@ import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react';
-import Login from "./Components/login";
+import Login from "./Components/Login";
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+
 import {BrowserRouter as Router} from "react-router-dom";
 import { Switch, Route } from "react-router-dom";
 
@@ -20,8 +23,12 @@ return (
     <div className='App'>
         <Router>
           <Switch>
-            <Route>
+            <Route exact path="/">
               <Login/>
+            </Route>
+            <Route  path="/home">
+              <Header/>
+              <Home/>
             </Route>
           </Switch>
         </Router>
