@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import Leftside from './Leftside';
+import Rightside from './RightSide';
+import Main from './Main';
 
 const Home = (props) => {
     return (
@@ -9,9 +12,9 @@ const Home = (props) => {
                 <p>Find talented pros in record time with Upwok and keep business moving.</p>
             </Section>
             <Layout>
-                <div>Left Side</div>
-                <div>Middle</div>
-                <div>Right</div>
+                <Leftside/>
+                <Rightside/>
+                <Main/>
             </Layout>
         </Container>
 
