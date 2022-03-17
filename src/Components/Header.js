@@ -145,6 +145,7 @@ const NavListWrap = styled.ul`
   display: flex;
   flex-wrap: nowrap;
   list-style-type: none;
+  justify-content:space-around;
   .active {
     span:after {
       content: "";

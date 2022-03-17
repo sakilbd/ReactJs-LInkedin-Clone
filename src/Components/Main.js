@@ -1,49 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
+import {BsCardImage} from 'react-icons/bs';
+import {MdOutlineVideoLibrary} from 'react-icons/md';
+import {MdOutlineEventAvailable} from 'react-icons/md';
+import {RiArticleLine} from 'react-icons/ri';
 
 const Main = (props) => {
   return(
 
     <Container>
-      <WritePost>
-          <ProfilePicture>
-
-          </ProfilePicture>
-          <InputField>
-            <div>
-              <img src="/images/user.svg"></img>
-            </div>
-            <div>
-              <input placeholder='Start a Post'></input>
-            </div>
-          </InputField>
-      </WritePost>
-      <Icons>
-        <PhotoSection>
-          <div>
-              <img></img>
-              <h5>Photo</h5>
-          </div>
-        </PhotoSection>
-        <VideoSection>
-        <div>
-              <img></img>
-              <h5>Video</h5>
-          </div>
-        </VideoSection>
-        <EventSection>
-        <div>
-              <img></img>
-              <h5>Event</h5>
-          </div>
-        </EventSection>
-        <ArticleSection>
-        <div>
-              <img></img>
-              <h5>Article</h5>
-          </div>
-        </ArticleSection>
-      </Icons>
+      <ShareBox>Share
+      <div>
+        <img src="/images/user.svg" alt=""></img>
+        <button>Start a post</button>
+      </div>
+      <div>
+        <button>
+          <BsCardImage/>
+          <span>Photo</span>
+        </button>
+        <button>
+          <MdOutlineVideoLibrary/>
+          <span>Video</span>
+        </button>
+        <button>
+          <MdOutlineEventAvailable/>
+          <span>Event</span>
+        </button>
+        <button>
+          <RiArticleLine/>
+          <span>Write Article</span>
+        </button>
+      </div>
+      </ShareBox>
     </Container>
   );
   
@@ -51,53 +40,65 @@ const Main = (props) => {
 
 const Container=styled.div`
 grid-area:main;
-background-color: #fff;
-border-radius: 5px;
-position: relative;
-border: none;
-height:20%;
-box-shadow: 0 0 0 1px rgb(0 0 0 / 15%), 0 0 0 rgb(0 0 0 / 20%);
-padding: 12px;
-`
-const WritePost= styled.div`
-
-
-`
-const ProfilePicture = styled.div`
 
 `
 
-const InputField = styled.div`
+const CommonCard = styled.div`
+text-align:center;
+overflow:hidden;
+margin-bottom:8px;
+background-color:#fff;
+border-radius:5px;
+position:relative;
+border:none;
+box-shadow:0 0 0 1px rgb(0 0 0 / 15%) , 0 0 0 rgb( 0 0 0 / 20%);
+`
+const ShareBox=styled(CommonCard)`
 display:flex;
-align-items:center;
-flex:1;
+flex-direction:column;
+color:#958b7b;
+margin:0 0 8px;
+background:white;
 div{
-  img{
-    height:auto;
-    width:50px;
-    border-radius:90%;
-    overflow:hidden;
+  button{
+    outline:none;
+    color:rgba(0,0 ,0,0.6)
+    font-size:14px;
+    line-height:1.5;
+    min-height:48px;
+    background:transparent;
+    border:none;
+    display:flex;
+    align-items:center;
+    font-weight:600;
+  }
+  &:first-child{
+    display:flex;
+    align-items:center;
+    padding:8px 16px 0px 16px;
+    img{
+      width:48px;
+      border-radius:50%;
+      margin-right:8px;
+    }
+    button{
+      margin:4px 0;
+      flex-grow:1;
+      border-radius:35px;
+      padding-left:16px;
+      border:1px solid rgba(0 , 0 , 0, 0.15);
+      border-radius:35px;
+      background-color:white;
+      text-align:left;
+    }
+  }
+  &:nth-child(2){
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    padding-bottom:4px;
   }
 }
-input{
-  
-  border-radius:30px;
-  height:50px;
-  padding:10px 10px;
-  width:auto !important;
-}
-
 `
-const Icons = styled.div`
-  display:grid;
-  gird-template-column:repeat(4 , 1fr);
 
-`
-const PhotoSection = styled.div``
-
-const VideoSection = styled.div``
-
-const EventSection = styled.div``
-
-const ArticleSection = styled.div``
-export default Main
+export default Main;
