@@ -1,0 +1,23 @@
+.image__icon ,.video__icon ,.article__icon,.event__icon{
+  
+    margin:0 4px 0 -2px;
+    font-size:20px;;
+    
+    
+}
+
+.image__icon{
+    color:#70b5f9;
+}
+
+.video__icon{
+    color:#84B868;
+}
+
+.event__icon{
+    color:#E69F3A;
+}
+
+.article__icon{
+    color:#F9927D;
+}
