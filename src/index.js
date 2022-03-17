@@ -3,16 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { Provider } from 'react-redux';
+import store from './store';
 
 import 'bootstrap/dist/css/bootstrap.css';
 
 
 
-const Element = <h1>hi whats up </h1>
 ReactDOM.render(
-  
+<Provider store={store}  >
   <App/>
+</Provider>
   ,
   document.getElementById('root')
 );
