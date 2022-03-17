@@ -16,7 +16,9 @@ const Main = (props) => {
       </div>
       <div>
         <button>
-          <BsCardImage/>
+          
+             <BsCardImage/>
+        
           <span>Photo</span>
         </button>
         <button>
@@ -53,6 +55,7 @@ position:relative;
 border:none;
 box-shadow:0 0 0 1px rgb(0 0 0 / 15%) , 0 0 0 rgb( 0 0 0 / 20%);
 `
+
 const ShareBox=styled(CommonCard)`
 display:flex;
 flex-direction:column;
@@ -97,6 +100,10 @@ div{
     flex-wrap:wrap;
     justify-content:space-around;
     padding-bottom:4px;
+    button{
+      display:flex;
+      margin: 5px;
+    }
   }
 }
 `
