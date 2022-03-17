@@ -61,8 +61,8 @@ const Main = (props) => {
         <SocialCounts>
           <li>
             <button>
-               <img src="/images/like.png" alt=""></img>
-               <img src='/images/clap.png' alt=""></img>
+               <img src="/images/like.svg" alt=""></img>
+               <img src='/images/clap.svg' alt=""></img>
                 <span>75</span>
             </button>
           </li>
@@ -70,6 +70,24 @@ const Main = (props) => {
             <a>2 comments</a>
           </li>
         </SocialCounts>
+        <SocialActions>
+          <button>
+            <img src='/images/like-icon.svg'></img>
+            <span>Like</span>
+          </button>
+          <button>
+            <img src='/images/comment-icon.svg'></img>
+            <span>Comments</span>
+          </button>
+          <button>
+            <img src='/images/share-icon.svg'></img>
+            <span>Share</span>
+          </button>
+          <button>
+            <img src='/images/send-icon.svg'></img>
+            <span>Send</span>
+          </button>
+        </SocialActions>
       </Article>
     </Container>
   );
@@ -230,19 +248,40 @@ overflow:auto;
 margin: 0 16px;
 padding: 8px 0;
 border-bottom: 1px solid #e9e5df;
-list-style-type: style none;
+list-style:none;
 li{
   margin-right:5px;
   font-size:12px;
     button{
       display:flex;
-      img:first-child{
-        height:20px;
-      }
-      img:nth-child(2){
-        height:32px;;
-      }
+      border:none;
+      background:transparent;
+      
+      
     }
+}
+`
+const SocialActions = styled.div`
+align-items:center;
+display:flex;
+flex-wrap:nowrap;
+justify-content: space-around;
+margin:0;
+min-height:40px;
+padding: 4px 8px;
+button{
+  display:inline-flex;
+  align-items: center;
+  padding:8px;
+  color:#0a66c2;
+  border:none;
+  background:transparent;
+  @media(min-width:768px){
+    span{
+      margin-left:8px;
+    }
+  }
+
 }
 `
 export default Main;
