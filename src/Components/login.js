@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { act } from 'react-dom/test-utils';
 import styled from "styled-components";
 import '../App.css';
+import {connect} from 'react-redux';
 
 
 class Login extends Component {
@@ -171,6 +172,13 @@ display: flex;
         }
   `;
 
+const mapStateToProps = (state) => {
+    return {};
+};
 
-export default Login;
+const mapDispatchToProps = (dispatch) => ({
+
+})
+export default connect(mapStateToProps,mapDispatchToProps)(Login);
+
 
